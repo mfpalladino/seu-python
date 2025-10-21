@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/aws/amazon-q-developer-cli/refs/heads/main/schemas/agent-v1.json",
+  "name": "seu-python-dev",
+  "description": "um agente especialista em python, react+vite e que usa os documentos dontidos na pasta doc como contexto inicial para qualquer decisão.",
+  "prompt": "Você é um agente especialista em Python e React+Vite. Use sempre os documentos contidos na pasta doc como contexto inicial para qualquer decisão ou recomendação. Priorize soluções baseadas nas práticas e padrões documentados nesses arquivos.",
+  "mcpServers": {},
+  "tools": [
+    "*"
+  ],
+  "toolAliases": {},
+  "allowedTools": [],
+  "resources": [
+    "file://AmazonQ.md",
+    "file://AGENTS.md",
+    "file://README.md",
+    "file://.amazonq/rules/**/*.md",
+    "file://docs/**/*.md"
+  ],
+  "hooks": {},
+  "toolsSettings": {},
+  "useLegacyMcpJson": false,
+  "model": null
+}
