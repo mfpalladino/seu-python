@@ -6,29 +6,22 @@
 
 O **Seu Python** é um assistente virtual especializado que atua como guia para os participantes da Python Brasil 2025. Com personalidade pythonista e conhecimento técnico profundo, ele ajuda os participantes a navegar pela programação do evento, descobrir atividades relevantes e aproveitar ao máximo a conferência.
 
+### 🚀 Nascido no AWS Vibe Coding Dojo
+
+Este projeto foi criado com muito **Python hacking love** 💚 durante o **AWS Vibe Coding Dojo** na Python Brasil 2025! 
+
+Em uma sessão de programação colaborativa utilizando o Amazon Q Developer, onde desenvolvedores se reuniram para hackear soluções inovadoras usando IA e AWS, o Seu Python ganhou vida. Entre `import antigravity`, risadas sobre indentação e muito café ☕, transformamos uma ideia maluca em realidade usando o poder do Amazon Bedrock.
+
+**O resultado?** Um bot que não só conhece Python como ninguém, mas também tem o humor característico da nossa comunidade pythonista brasileira! 🇧🇷🐍
+
+*"Porque todo bom código Python precisa de uma boa dose de diversão e colaboração!"*
+
 ### Características Principais
 
 - 🧠 **IA Conversacional**: Powered by Amazon Bedrock com Knowledge Base RAG
 - 🎭 **Personalidade Pythonista**: Humor característico da comunidade Python
-- 📚 **Base de Conhecimento**: Informações completas sobre palestras, workshops e keynotes
-- ⚡ **Respostas Rápidas**: Arquitetura otimizada para baixa latência
+- 📚 **Base de Conhecimento**: Informações sobre palestras, workshops e keynotes da Python Brasil 2025
 - 🎨 **Interface Moderna**: Frontend React + Vite responsivo
-
-## 🏗️ Arquitetura
-
-```
-┌─────────────────┐    ┌──────────────┐    ┌─────────────────────┐
-│   React + Vite  │───▶│   FastAPI    │───▶│  Amazon Bedrock KB  │
-│   (Frontend)    │    │  (Backend)   │    │       (RAG)         │
-└─────────────────┘    └──────────────┘    └─────────────────────┘
-                                                      │
-                                                      ▼
-                                            ┌─────────────────────┐
-                                            │    Nova Micro LLM   │
-                                            │   (Geração de       │
-                                            │    Respostas)       │
-                                            └─────────────────────┘
-```
 
 ### Stack Tecnológica
 
@@ -85,7 +78,7 @@ npm install
 # backend/.env
 AWS_REGION=us-east-1
 BEDROCK_KNOWLEDGE_BASE_ID=your-kb-id
-BEDROCK_MODEL_ID=amazon.nova-micro-v1:0
+BEDROCK_MODEL_ID=your-model-id
 ```
 
 ### Executando o Projeto
@@ -107,36 +100,6 @@ npm run dev
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:8000
 - Documentação API: http://localhost:8000/docs
-
-## 📁 Estrutura do Projeto
-
-```
-seu-python/
-├── 📁 backend/                 # API FastAPI
-│   ├── 📁 app/
-│   │   ├── main.py            # Aplicação principal
-│   │   ├── bedrock_service.py # Serviço Bedrock
-│   │   └── config.py          # Configurações
-│   ├── requirements.txt       # Dependências Python
-│   └── 📁 venv/              # Ambiente virtual
-├── 📁 frontend/               # Interface React
-│   ├── 📁 src/
-│   │   ├── App.jsx           # Componente principal
-│   │   ├── App.css           # Estilos
-│   │   └── main.jsx          # Entry point
-│   ├── package.json          # Dependências Node
-│   └── vite.config.js        # Configuração Vite
-├── 📁 knowledge-base/         # Base de conhecimento
-│   ├── 📁 palestras/         # Informações das palestras
-│   ├── 📁 workshops/         # Detalhes dos workshops
-│   ├── 📁 keynotes/          # Keynotes principais
-│   ├── 📁 informacoes-gerais/# Info geral do evento
-│   └── 📁 patrocinadores/    # Dados dos patrocinadores
-├── 📁 docs/                   # Documentação
-│   ├── definicao-produto.md  # Especificação do produto
-│   └── arquitetura-tecnica.md# Arquitetura técnica
-└── README.md                  # Este arquivo
-```
 
 ## 🤖 Funcionalidades
 
@@ -199,66 +162,9 @@ curl -X POST "http://localhost:8000/chat" \
 3. **Execute a sincronização** dos documentos
 4. **Anote o Knowledge Base ID** para as variáveis de ambiente
 
-### Modelos Necessários
-
-- **Nova Micro**: Para geração de respostas (custo-efetivo)
-- **Titan Embedding V2**: Para embeddings dos documentos
-
-## 💰 Estimativa de Custos
-
-Para 5.000 interações durante o evento:
-
-| Componente | Custo Estimado |
-|------------|----------------|
-| Knowledge Base Retrieval | $30.00 |
-| Nova Micro (Input/Output) | $0.17 |
-| Titan Embeddings | $0.02 |
-| **Total** | **~$30.19** |
-
-> Custos baseados em preços ON DEMAND da região us-east-1
-
-## 🚀 Deploy
-
-### Opções de Deploy
-
-1. **Local Development**: FastAPI + React dev servers
-2. **AWS Lambda**: Serverless backend com API Gateway
-3. **EC2/ECS**: Containerized deployment
-4. **Amplify**: Frontend hosting
-
-### Deploy Serverless (Recomendado)
-
-```bash
-# Instalar dependências de deploy
-pip install mangum
-
-# Configurar Lambda handler
-# Ver documentação específica em docs/
-```
-
-## 🤝 Contribuindo
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/nova-funcionalidade`)
-5. Abra um Pull Request
-
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## 👥 Equipe
-
-- **Desenvolvimento**: Equipe Python Brasil 2025
-- **IA/ML**: Amazon Bedrock Integration
-- **Frontend**: React + Vite Stack
-
-## 📞 Suporte
-
-- 📧 Email: contato@pythonbrasil.org.br
-- 🐛 Issues: [GitHub Issues](../../issues)
-- 💬 Discussões: [GitHub Discussions](../../discussions)
 
 ---
 
